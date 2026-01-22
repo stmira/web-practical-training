@@ -9,9 +9,10 @@
     list-style: none;
     text-decoration: none;
 }
-/* リンクの線なし */
+/* リンク */
 a {
     text-decoration: none;
+    color: black;
 }
 
 /* wrapperで表示サイズ調整 */
@@ -41,4 +42,11 @@ a {
 
 .menu li {
     margin-right: 15px;
+}
+
+/* View More */
+.link-text {
+    display: block; /* タグの内容をブロックとして扱う */
+    text-align: center;
+    margin-top: 40px;
 }
