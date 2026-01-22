@@ -19,18 +19,28 @@ a {
 .wrapper {
     width: 100%;
     max-width: 1360px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 0 40px;
 }
 .product-list img {
     width: 100%;
 }
 
-/* headerを横並び */
+.product-list p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-top: 6px;
+    }
+
+/* header */
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.site-title img{
+    width: 180px;
 }
 
 /* footerを横並び */
@@ -51,7 +61,11 @@ a {
     margin-top: 40px;
 }
 
+
 /* レスポンシブ対応デザイン */
 @media (max-width: 600px){
-    
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
