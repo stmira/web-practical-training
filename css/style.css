@@ -50,3 +50,8 @@ a {
     text-align: center;
     margin-top: 40px;
 }
+
+/* レスポンシブ対応デザイン */
+@media (max-width: 600px){
+    
+}
