@@ -9,9 +9,11 @@
     list-style: none;
     text-decoration: none;
 }
-.product-list  a{
+/* リンクの線なし */
+a {
     text-decoration: none;
 }
+
 /* wrapperで表示サイズ調整 */
 .wrapper {
     width: 100%;
