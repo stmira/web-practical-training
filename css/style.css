@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* ★★★　index　★★★ */
+/* ★★★　indexのページスタイル　★★★ */
 /* メイン画像をグリッドの配置にする */
 .product-list {
     display: grid;
@@ -61,7 +61,7 @@ a {
     margin-top: 40px;
 }
 
-/* ★★★　itemデザイン　★★★ */
+/* ★★★　itemのページスタイル　★★★ */
 .item {
     display: flex;
     justify-content: space-between;
@@ -90,8 +90,21 @@ a {
 }
 /* pageTitle */
 .page-title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 20px;
+}
+
+/* ★★★　companyページのスタイル　★★★ */
+#company {
+    width: 50%;
+}
+.info {
+    width: 100%;
+    display: flex;
+    
+}
+.map {
+    width: 100%;
 }
 
 
