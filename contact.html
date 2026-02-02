@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Furniture Design</title>
+        <meta name="description" content="家具の紹介ページ">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- pcとスマホを切り替えるため必要なコード-->
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <header id="header" class="wrapper">
+            <h1 class="site-title">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="Furniture Design">
+                </a>
+            </h1>
+            <div id="navArea">
+                <button id="nav">
+                    <!-- ナビゲーションの中身 -->
+                    <ul class="menu-list">
+                        <li><a href="products.html">PRODUCTS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="company.html">COMPANY</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </button>
+            </div>
+            <div class="content">
+                <section>
+                    <div class="btn-trigger">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </section>
+            </div>
+        </header>
+        <main>
+            <div class="cantent wrapper">
+                <h1 class="page-title">Contact</h1>
+                <form id="contact-form" action="#" method="post">
+                    お名前<br>
+                    <input type="text" name="name" placeholder="山田 太郎">
+                    <br>
+                    <br>
+                    メールアドレス<br>
+                    <input type="email" name="email" placeholder="example@mail.com">
+                    <br>
+                    <br>
+                    電話番号<br>
+                    <input type="tel" name="tel" placeholder="090-1234-5678">
+                    <br>
+                    <br>
+                    年齢<br>
+                    <input type="number" min="0" max="100" name="age" placeholder="例）25">
+                    <br>
+                    <br>
+                    性別<br>
+                    <input type="radio" name="gender" value="男" checked>男性 
+                    <input type="radio" name="gender" value="女">女性 
+                    <input type="radio" name="gender" value="その他">その他
+                    <br>
+                    <br>
+                    お問い合わせ種別<br>
+                    <select name="select">
+                        <option>商品について</option>
+                        <option selected>修理・サポート</option>
+                        <option>採用</option>
+                        <option>その他</option>
+                    </select>
+                    <br>
+                    <br>
+                    興味のある商品（複数可）
+                    <input type="checkbox" name="category" value="チェア" id="category1" checked>
+                    <label for="category1">チェア</label>
+                    <input type="checkbox" name="category" value="テーブル" id="category2">
+                    <label for="category2">テーブル</label>
+                    <input type="checkbox" name="category" value="ソファ" id="category3">
+                    <label for="category3">ソファ</label>
+                    <input type="checkbox" name="category" value="照明" id="category4">
+                    <label for="category4">照明</label>
+                    <br>
+                    <br>
+                    希望納期<br>
+                    <input type="date" name="date">
+                    <br><br>
+                    添付ファイル<br>
+                    <input type="file" name="file">
+                    <br><br>
+                    お問い合わせ内容<br>
+                    <textarea name="message" rows="6">お問い合わせ内容をご記入ください</textarea>
+                    <br><br>
+                    <input type="checkbox" name="consent" value="同意" id="consent">
+                    <label for="consent">
+                        プライバシーポリシーに同意します
+                    </label>
+                    <br><br>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </main>
+        <footer id="footer" class="wrapper">
+            <ul class="menu">
+                <li>INSTAGRAM</li>
+                <li>TWITTER</li>
+                <li>FACEBOOK</li>
+            </ul>
+        </footer>
+    </body>
+</html>
