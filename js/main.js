@@ -1,3 +1,4 @@
+// ハンバーガーメニュー
 const open = document.querySelectorAll('.menu-list li');
 
 const menuOptions = {
@@ -35,3 +36,5 @@ btn.addEventListener('click', ()=>{
     }
 });
 });
+
+// aboutガチャ
