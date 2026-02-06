@@ -37,4 +37,12 @@ btn.addEventListener('click', ()=>{
 });
 });
 
-// aboutガチャ
+// loading
+document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.getElementById('loading');
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('loaded');
+        }, 2000);
+    }
+});
