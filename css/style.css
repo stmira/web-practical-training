@@ -49,6 +49,23 @@ a {
     z-index: 40;
 }
 
+#header2 {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 40;
+}
+
+/* aboutページのハンバーガーメニューを白色に */
+#header2 .btn-trigger span {
+    background-color: white;
+}
+
 .site-title img{
     width: 180px;
 }
@@ -563,7 +580,7 @@ body{
 }
 
 /* ★★★　about　★★★ */
-.input-container {
+.input-textarea {
     position: fixed;
     top: 80%;
     left: 50%;
@@ -601,7 +618,7 @@ body{
     transform: translate(-50%, -50%);
     z-index: -1;
     font-size: 10vw;
-    opacity: 0.1;
+    opacity: 1;
     white-space: nowrap;
     pointer-events: none;
 }
@@ -610,6 +627,7 @@ body{
     position: fixed;
     top: 80%;
     left: 80%;
+    width: 15%;
     display: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -619,12 +637,9 @@ body{
     border-radius: 5px;
 }
 
-/* コードプリセット機能 */
-
-
 #reset-btn:active {
-        transform: scale(0.9); /* 押した時に少し凹む演出 */
-    }
+    transform: scale(0.9); /* 押した時に少し凹む演出 */
+}
 
 /* ★★★　レスポンシブ対応デザイン　★★★ */
 @media (max-width: 600px){

@@ -101,12 +101,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // コードのプリセット
 const presets = [
-    "body { background: ; }",
-    "body { filter: invert(1); }",
-    "body { font-family: 'Comic Sans MS'; }",
-    "h1 { transform: rotate(10deg); color: yellow; }",
-    "textarea { border: 5px dotted #0f0; }",
-    "#bg-text { opacity: 0.8; font-size: 20vw; }"
+    {name:"逆転世界", code:"body { transform: rotate(180deg); }"},
+    "body { filter: blur(5px); }",
+    "* { font-size: 30px; }",
+
 ];
 
 // コードを流す（DOM 準備後に初期化）
@@ -154,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { left: '100%' },
             { left: '-100%' }
         ], {
-            duration: 20000 + Math.random() * 5000, // 10〜15秒かけてゆっくり
+            duration: 30000 + Math.random() * 5000, // 10〜15秒かけてゆっくり
             easing: 'linear'
         });
 
