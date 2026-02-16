@@ -17,11 +17,6 @@
     </head>
     <body>
         <header id="header" class="wrapper">
-        <h1 class="site-title">
-            <a href="index.html">
-                    <img src="img/logo.svg" alt="Furniture Design">
-                </a>
-            </h1>
             <div id="navArea">
                 <button id="nav">
                     <!-- ナビゲーションの中身 -->
@@ -41,12 +36,35 @@
                     </div>
                 </section>
             </div>
+        <style id="dynamic-style">
+            body {
+                margin: 0;
+                background-color: #1a1a1a;
+                color: white;
+                transition: all 0.5s;  /* 変化をなめらかに */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                overflow: hidden;
+                font-family: sans-serif;
+            }
+        </style>
         </header>
-        <div class="content wrapper">
+        <div class="content wrapper" style="padding-top: 100px;">
             <h1 class="page-title"></h1>
             <div id="about">
             </div>
-            
+        </div>
+        <div id="bg-text">HELLO WORLD</div>
+        <div class="input-container">
+            <input type="text" id="code-input" placeholder="コードを入力" spellcheck="false">
+            <button id="myButton">送信</button>
+        </div>
+        <div style="margin-top: 10px;">
+            <button id="reset-btn">
+                リセットする
+            </button>
         </div>
     </body>
 </html>

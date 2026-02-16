@@ -167,9 +167,6 @@ body{
     z-index: 100;
 }
 
-
-
-
 /* -- Loading thingy --*/
 .loading-dot {
     border-radius:100%;
@@ -560,22 +557,74 @@ body{
 /* contact-form 内のチェックボックスとラジオボタン専用の調整 */
 #contact-form input[type="checkbox"],
 #contact-form input[type="radio"] {
-
-    /* width: 100% などの共通指定を打ち消し、
-    チェックボックス本来のサイズに戻す */
     width: auto;
-
-    /* 他の input に指定している padding を無効化し、
-    余白によるズレを防ぐ */
     padding: 0;
-
-    /* テキスト入力用の枠線が
-    チェックボックスに適用されないようにする */
     border: 0;
 }
 
 /* ★★★　about　★★★ */
+.input-container {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 30;
+}
 
+#code-input {
+    padding: 10px;
+    border: 1px solid white;
+    width: 300px;
+    border: 2px solid white;
+    color: rgb(255, 196, 0);
+}
+
+#myButton {
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#myButton:active {
+        transform: scale(0.9); /* 押した時に少し凹む演出 */
+    }
+
+#bg-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    font-size: 10vw;
+    opacity: 0.1;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+#reset-btn {
+    position: fixed;
+    top: 80%;
+    left: 80%;
+    display: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* コードプリセット機能 */
+
+
+#reset-btn:active {
+        transform: scale(0.9); /* 押した時に少し凹む演出 */
+    }
 
 /* ★★★　レスポンシブ対応デザイン　★★★ */
 @media (max-width: 600px){
