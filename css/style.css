@@ -9,6 +9,19 @@
     list-style: none;
     text-decoration: none;
 }
+
+.baseball-box {
+    width: 270px;
+    height: 270px;
+    background-image: url('../img/bato.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.baseball-box:hover {
+  background-image: url('../img/grob.png'); /* 2コマ目 */
+}
+
 /* リンク */
 a {
     text-decoration: none !important;
@@ -166,7 +179,6 @@ a {
     transform: translateY(-7.5px) rotate(45deg);
 }
 
-/* loading */
 /* ローディング画面 */
 body{
     margin: 0;
@@ -490,10 +502,13 @@ body{
     display: flex;
     justify-content: space-between;
     max-width: 800px;
+    cursor: default;
 }
 /* img */
 .item-img {
-    width: 42%;
+    margin-top: 3%;
+    width: 30%;
+    height: 30%;
 }
 .item-img img {
     width: 100%;
@@ -501,13 +516,22 @@ body{
 /* text */
 .item-text {
     width: 50%;
+    margin: 2%;
+    background-color: lightcyan;
+    border-radius: 10px;
+    border: 3px solid green;
+    margin-top: 2rem;
 }
 .item-text p{
-    padding-bottom: 1rem;
+    margin: 10px;
     font-size: 15px;
 }
-.item-text table td {
-    padding-right: 1em;
+.item-text ul li{
+    padding-left: 10px;
+    list-style: none;
+}
+.item-text ul {
+    margin-bottom: 10px;
 }
 .link-text {
     margin: 50px;
@@ -613,7 +637,7 @@ body{
 
 #bg-text {
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
