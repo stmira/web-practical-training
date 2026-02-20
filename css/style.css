@@ -1,25 +1,185 @@
 @charset "UTF-8";
 
-            /* ★★★　indexのページスタイル　★★★ */
-/* メイン画像をグリッドの配置にする */
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 35px;
-    list-style: none;
-    text-decoration: none;
+/* body {
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+} */
+
+/* header */
+#header {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    padding: 20px 40px;
+    background-color: #B2D235;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 40;
 }
 
+#header2 {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 40;
+}
+
+
+/* footerを横並び */
+
+#footer .menu {
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+}
+
+.menu li {
+    margin-right: 15px;
+}
+
+.headImg img{
+    width: 120px;
+    height: 125px;
+    position: fixed;
+    top: 20px;
+    left: 1125px;
+    z-index: 51;
+    pointer-events: none;
+}
+
+/* View More */
+.link-text {
+    display: block; /* タグの内容をブロックとして扱う */
+    text-align: center;
+    margin-top: 40px;
+}
+
+.site-title p{
+    margin-top: 0;
+    width: 180px;
+    color: #005133;
+    z-index: 49;
+}
+
+
+/* ★★★　indexのページスタイル　★★★ */
+/* main */
 .baseball-box {
     width: 270px;
     height: 270px;
     background-image: url('../img/bato.png');
-    background-size: contain;
+    border:5px solid #B2D235;
+    background-size: 80%;
+    background-position: center;
     background-repeat: no-repeat;
+    border-radius: 30%;
+    box-shadow: 4px 4px 4px gray;
 }
 
 .baseball-box:hover {
-  background-image: url('../img/grob.png'); /* 2コマ目 */
+    transform: scale(1.05);
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.bmt-box {
+    width: 270px;
+    height: 270px;
+    background-image: url('../img/bmt.png');
+    border:5px solid #B2D235;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30%;
+    box-shadow: 4px 4px 4px gray;
+}
+
+.bmt-box:hover {
+    transform: scale(1.05);
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.game-box {
+    width: 270px;
+    height: 270px;
+    background-image: url('../img/game.png');
+    border:5px solid #B2D235;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30%;
+    box-shadow: 4px 4px 4px gray;
+}
+
+.game-box:hover {
+    transform: scale(1.05);
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.music-box {
+    width: 270px;
+    height: 270px;
+    background-image: url('../img/music.png');
+    border:5px solid #B2D235;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30%;
+    box-shadow: 4px 4px 4px gray;
+}
+
+.music-box:hover {
+    transform: scale(1.05);
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.anime-box {
+    width: 270px;
+    height: 270px;
+    background-image: url('../img/anime.png');
+    border:5px solid #B2D235;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30%;
+    box-shadow: 4px 4px 4px gray;
+}
+
+.anime-box:hover {
+    transform: scale(1.05);
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.make-box {
+    width: 270px;
+    height: 270px;
+    background-image: url('../img/canvas.png');
+    border:5px solid #B2D235;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30%;
+    box-shadow: 4px 4px 4px gray;
+}
+
+.make-box:hover {
+    transform: scale(1.05);
+    box-shadow: none;
+    transition: 0.5s;
 }
 
 /* リンク */
@@ -36,91 +196,61 @@ a {
     padding: 0 40px;
 }
 #top {
-    padding-top: 100px;
+    padding-top: 10px;
 }
+
+/* メイン画像をグリッドの配置にする */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    place-content: center;
+    place-items: center;
+}
+
 .product-list img {
     width: 100%;
 }
 
 .product-list p {
-        font-size: 0.8rem;
-        line-height: 1.4;
-        margin-top: 6px;
-    }
-
-/* header */
-#header {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 40px;
-    background-color: #ffffff;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 40;
-}
-
-#header2 {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 40px;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 40;
-}
-
-/* aboutページのハンバーガーメニューを白色に */
-#header2 .btn-trigger span {
-    background-color: white;
-}
-
-.site-title img{
-    width: 180px;
-}
-
-/* footerを横並び */
-
-#footer .menu {
-    display: flex;
-    list-style: none;
-    font-size: 14px;
-}
-
-.menu li {
-    margin-right: 15px;
-}
-
-/* View More */
-.link-text {
-    display: block; /* タグの内容をブロックとして扱う */
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-top: 6px;
     text-align: center;
-    margin-top: 40px;
+    color: #005133;
 }
+
 
 /* ★★★　ハンバーガーメニューのスタイル　★★★ */
-.content {
-    cursor: pointer;
-}
 .btn-trigger {
-    position: relative;
-    width: 50px;
-    height: 5px;
-    bottom: 7px;
+    cursor: pointer;
+    position: fixed;
+    top: 50px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
     z-index: 50;
+    opacity: 0;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
 }
 .btn-trigger span {
     position: absolute;
-    left: 5px;
-    /* bottom: 5px; */
-    width: 75%;
+    left: 51%;
+    transform: translateX(-50%);
+    width: 60%;
     height: 2px;
     background-color: black;
-    border-radius: 4px;
+    border-radius: 10px;
+    margin-top: 28px;
 }
 .btn-trigger, .btn-trigger span {
     display: inline-block;
@@ -139,14 +269,15 @@ a {
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 36px 50px;
+    padding-top: 36px;
+    padding-left: 50px;
     z-index: 10;
-    opacity: 0.8;
-    background-color: black;
+    background-color: #96C78C;
     visibility: hidden;
     display: flex;
     align-items: flex-start;
     cursor: default;
+    z-index: 49;
 }
 #nav .menu-list {
     transform: translateX(-100%);
@@ -158,25 +289,41 @@ a {
 #nav .menu-list li {
     list-style: none;
     margin-bottom: 20px;
+    font-size: 30px;
 }
 #nav .menu-list a {
-    color: white;
+    color: #005133;
+}
+#nav img {
+    width: 400px;
+    height: 400px;
+    margin-top: 200px;
+    margin-left: 600px;
+    animation: rotateAction 10s linear infinite;
 }
 
+@keyframes rotateAction {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 /*=============================
 .btn-trigger.active
 =============================*/
+.btn-trigger.active {
+    background-color: #f0f0f0;
+    border-color: black;
+}
 .btn-trigger.active span {
-    background-color: #ffffff;
+    background-color: #000000;
 }
 .btn-trigger.active span:nth-of-type(1) {
-    -webkit-transform: translateY(7.5px) rotate(-45deg);
-    transform: translateY(7.5px) rotate(-45deg);
+    -webkit-transform: translateX(-50%) translateY(7.5px) rotate(-45deg);
+    transform: translateX(-50%) translateY(7.5px) rotate(-45deg);
 }
 .btn-trigger.active span:nth-of-type(2) {
-    -webkit-transform: translateY(-7.5px) rotate(45deg);
-    transform: translateY(-7.5px) rotate(45deg);
+    -webkit-transform: translateX(-50%) translateY(-7.5px) rotate(45deg);
+    transform: translateX(-50%) translateY(-7.5px) rotate(45deg);
 }
 
 /* ローディング画面 */
@@ -498,6 +645,9 @@ body{
 }
 
 /* ★★★　itemのページスタイル　★★★ */
+.background {
+    background-color: lightcyan;
+}
 .item {
     display: flex;
     justify-content: space-between;
@@ -506,7 +656,8 @@ body{
 }
 /* img */
 .item-img {
-    margin-top: 3%;
+    margin-top: 5%;
+    padding-left: 3%;
     width: 30%;
     height: 30%;
 }
@@ -517,9 +668,7 @@ body{
 .item-text {
     width: 50%;
     margin: 2%;
-    background-color: lightcyan;
     border-radius: 10px;
-    border: 3px solid green;
     margin-top: 2rem;
 }
 .item-text p{
@@ -538,10 +687,11 @@ body{
 }
 /* pageTitle */
 .page-title {
-    font-size: 16px;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    font-size: 30px;
+    margin-top: 90px;
     font-weight: normal;
+    padding: 20px 0 0 20px;
+    color: #6699CC;
 }
 
 /* ★★★　companyページのスタイル　★★★ */
@@ -663,6 +813,38 @@ body{
 
 #reset-btn:active {
     transform: scale(0.9); /* 押した時に少し凹む演出 */
+}
+
+.apple {
+    width: 100px;
+    height: 90px;
+    background-color: #ff3b30; /* リンゴの赤 */
+    position: relative;
+    border-radius: 40px 40px 50px 50px; /* 下を少し絞る */
+    margin: 50px auto;
+}
+
+/* ヘタの部分 */
+.stem {
+    width: 6px;
+    height: 20px;
+    background-color: #8b4513;
+    position: absolute;
+    top: -15px;
+    left: 47px;
+    border-radius: 3px;
+}
+
+/* 葉っぱの部分 */
+.leaf {
+    width: 30px;
+    height: 15px;
+    background-color: #4cd964;
+    position: absolute;
+    top: -20px;
+    left: 55px;
+    border-radius: 0 20px 0 20px; /* 葉っぱの形にする */
+    transform: rotate(-10deg);
 }
 
 /* ★★★　レスポンシブ対応デザイン　★★★ */

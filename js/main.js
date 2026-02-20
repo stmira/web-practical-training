@@ -9,32 +9,42 @@ const menuOptions = {
 
 // メニューを開く
 document.addEventListener('DOMContentLoaded', () => {
-const nav = document.querySelector('#nav');
-const btn = document.querySelector('.btn-trigger');
-const menuList = document.querySelector('.menu-list');
-btn.addEventListener('click', ()=>{
-    btn.classList.toggle('active');
-    if (btn.classList.contains('active')) {
-        nav.animate(
-            {
-                visibility: 'visible',
-            },
-            {
-                duration:1,
-                fill: "forwards",
-            }
-        );
-        menuList.classList.add('visible');
-    } else {
-        nav.animate(
-            {
-                visibility: 'hidden',
-            },
-            menuOptions
-        );
-        menuList.classList.remove('visible');
-    }
-});
+    const nav = document.querySelector('#nav');
+    const btn = document.querySelector('.btn-trigger');
+    const menuList = document.querySelector('.menu-list');
+    const apple = document.getElementById('apple');
+
+    const imgA = 'redRingo.png';
+    const imgB = 'redRingoOpen.png';
+    btn.addEventListener('click', ()=>{
+        if(apple && apple.src.includes(imgA)){
+            apple.src = 'img/' + imgB;
+        }else if(apple) {
+            apple.src = 'img/' + imgA;
+        };
+        btn.classList.toggle('active');
+        if (btn.classList.contains('active')) {
+            nav.animate(
+                {
+                    visibility: 'visible',
+                    
+                },
+                {
+                    duration:1,
+                    fill: "forwards",
+                }
+            );
+            menuList.classList.add('visible');
+        } else {
+            nav.animate(
+                {
+                    visibility: 'hidden',
+                },
+                menuOptions
+            );
+            menuList.classList.remove('visible');
+        }
+    });
 });
 
 // loading
@@ -72,11 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
             styleTag.innerHTML = initialCSS + "\n" + code;
 
             if(code.includes('name')){
-                bgText.innerText = "MY NAME IS GEMINI";
+                // bgText.innerText = "MY NAME IS GEMINI";
             } else if (code.includes('hobby')){
-                bgText.innerText = "I LOVE CODING";
+                // bgText.innerText = "I LOVE CODING";
             } else {
-                bgText.innerText = "コードをいれてね！";
+                // bgText.innerText = "コードをいれてね！";
             };
 
             if (input.value.length > 0){
@@ -92,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resetBtn.addEventListener('click', ()=>{
         input.value = "";
         styleTag.innerHTML = initialCSS;
-        bgText.innerText = "HELLO WORLD"
+        // bgText.innerText = "HELLO WORLD"
         resetBtn.style.background = "#866bff";
         setTimeout(()=>{ resetBtn.style.background = "#444";}, 200);
     });
@@ -142,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             border: '1px solid #0f0',
             color: '#0f0',
             fontFamily: 'monospace',
-            zIndex: '9999',
+            zIndex: '0',
             pointerEvents: 'auto'
         });
 
