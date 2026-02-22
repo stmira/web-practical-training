@@ -86,17 +86,15 @@ body {
 }
 
 .profile {
+    width: 60% !important; 
     margin: 100px auto !important; 
-    width: 90% !important; 
-    max-width: 700px !important; 
-    
-    /* 文字は左寄せ */
     text-align: left; 
     color: #005133;
     border-radius: 30px;
     border: #005133 solid 2px;
     background-color: white;
     box-shadow: 4px 4px 4px gray;
+    transition: 0.5s;
 }
 
 .profile:hover {
@@ -800,8 +798,43 @@ main .bale .li ul {
 }
 
 .carousel-item img {
-    height: 500px; /* 好きな高さに固定 */
+    width: 800px;
+    height: 600px; /* 好きな高さに固定 */
     object-fit: cover;
+    margin: 0 auto;
+}
+
+/* music */
+.music-title {
+    margin: 200px auto 80px !important; 
+    padding: 10px 50px 0 !important;
+    background-color: white;
+    width: 300px;
+    border: #005133 solid 3px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #005133;
+    box-sizing: border-box;
+}
+.youtube {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    padding: 0 0 !important;
+    text-decoration: none;
+    place-content: center;
+    place-items: center;
+    margin: 50px auto !important;
+}
+.youtube .profile {
+    width: 80% !important; 
+    height: 90% !important;
+    margin: 20px 0 !important;
+}
+#lulu  img{
+    width: 40% !important;
 }
 
 /* ★★★　companyページのスタイル　★★★ */

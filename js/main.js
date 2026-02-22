@@ -78,7 +78,7 @@ $(function() {
     topBtn.click(function () {
         $('body,html').animate({
             scrollTop: 0
-        }, 500); // 0.5秒かけて戻る
+        }, 100 ); // 0.1秒かけて戻る
         return false;
     });
 });

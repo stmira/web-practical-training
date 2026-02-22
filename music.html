@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>Furniture Design</title>
+        <meta name="description" content="家具の紹介ページ">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- pcとスマホを切り替えるため必要なコード-->
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="drawing" id="loading">
+            <div class="loading-dot"></div>
+        </div>
+        <div class="headImg">
+            <img id="apple" src="img/redRingo.png" alt="リンゴの画像">
+        </div>
+        <header id="header" class="wrapper">
+            <h1 class="site-title">
+                <a href="index.html">
+                    <P>戻る</P>
+                </a>
+            </h1>
+            <div id="navArea">
+                <button id="nav">
+                    <!-- ナビゲーションの中身 -->
+                    <ul class="menu-list">
+                        <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">Game</a></li>
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <img src="img/blueApple.png" alt="青りんごの画像">
+                    </button>
+                </div>
+                <div class="btn-trigger">
+                    <section>
+                        <div class="content">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </section>
+                </div>
+        </header>
+        <main>
+            <div class="title">
+                <h2>好きな音楽</h2>
+            </div>
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000"> <img src="img/mrs_main.jpeg" class="d-block w-100"  alt="写真1">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                    <img src="img/lulu_samne.jpeg" class="d-block w-100" id="cat1" alt="写真2">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                    <img src="img/Babeltoh.jpg" class="d-block w-100" alt="写真3">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+            <div class="music">
+                <div class="profile">
+                    <h2>Mrs.GreenApple</h2>
+                    <div class="bale">
+                        <img src="img/mrs.webp" alt="cat画像" class="item-img">
+                        <div class="li">
+                            <p>xxxxxxxxxxxxxxxxx</p>
+                            <p>xxxxxxxxxxxxxxxxxx</p>
+                            <ul>
+                                <li>一番好きな曲： Good Day</li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-title">
+                    <h3>おすすめの曲</h3>
+                </div>
+                <ul class="youtube">
+                    <div class="profile">
+                        <h2>lulu</h2>
+                        <div class="bale" id="lulu">
+                            <img src="img/lulu_samne.jpeg" alt="cat画像" class="item-img">
+                            <div class="li">
+                                <p>xxxxxxxxxxxxxxxxx</p>
+                                <p>xxxxxxxxxxxxxxxxxx</p>
+                                <ul>
+                                    <li>一番好きな曲： Good Day</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>天国</h2>
+                        <div class="bale">
+                            <img src="img/mrs.webp" alt="cat画像" class="item-img">
+                            <div class="li">
+                                <p>xxxxxxxxxxxxxxxxx</p>
+                                <p>xxxxxxxxxxxxxxxxxx</p>
+                                <ul>
+                                    <li>一番好きな曲： Good Day</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>ナハトムジーク</h2>
+                        <div class="bale">
+                            <img src="img/mrs.webp" alt="cat画像" class="item-img">
+                            <div class="li">
+                                <p>xxxxxxxxxxxxxxxxx</p>
+                                <p>xxxxxxxxxxxxxxxxxx</p>
+                                <ul>
+                                    <li>一番好きな曲： Good Day</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>Mrs.GreenApple</h2>
+                        <div class="bale">
+                            <img src="img/mrs.webp" alt="cat画像" class="item-img">
+                            <div class="li">
+                                <p>xxxxxxxxxxxxxxxxx</p>
+                                <p>xxxxxxxxxxxxxxxxxx</p>
+                                <ul>
+                                    <li>一番好きな曲： Good Day</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <a class="link-text" href="index.html">Back To Products</a>
+            <div id="page-top">
+                <a href="#">TOP</a>
+            </div>
+        </main>
+        <!-- <footer id="footer" class="wrapper">
+            <ul class="menu">
+                <li>INSTAGRAM</li>
+                <li>TWITTER</li>
+                <li>FACEBOOK</li>
+            </ul>
+        </footer> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
