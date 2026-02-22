@@ -12,60 +12,84 @@
         <script src="js/main.js"></script>
     </head>
     <body>
+        <div class="drawing" id="loading">
+            <div class="loading-dot"></div>
+        </div>
+        <div class="headImg">
+            <img id="apple" src="img/redRingo.png" alt="リンゴの画像">
+        </div>
         <header id="header" class="wrapper">
-        <h1 class="site-title">
-            <a href="index.html">
-                <img src="img/logo.svg" alt="Furniture Design">
+            <h1 class="site-title">
+                <a href="index.html">
+                    <P>戻る</P>
                 </a>
             </h1>
             <div id="navArea">
                 <button id="nav">
                     <!-- ナビゲーションの中身 -->
                     <ul class="menu-list">
-                        <li><a href="index.html">PRODUCTS</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="company.html">COMPANY</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </button>
-            </div>
-            <div class="content">
-                <section>
-                    <div class="btn-trigger">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </section>
-            </div>
+                        <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">Game</a></li>
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <img src="img/blueApple.png" alt="青りんごの画像">
+                    </button>
+                </div>
+                <div class="btn-trigger">
+                    <section>
+                        <div class="content">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </section>
+                </div>
         </header>
         <main>
-            <div class="content wrapper">
-                <div class="background">
-                    <h1 class="page-title">中学生</h1>
-                    <div class="item">
-                        <div class="item-img">
-                            <img src="img/ground.png" alt="グラウンドのドット画像">
-                        </div>
-                        <div class="item-text">
-                            <p>中学生時代に部活動で野球をしていました。</p>
-                            <p>朝練から、学校終わりのあとの部活動はもちろんのこと、土日にもほとんど練習や大会がありとても大変でした。</p>
-                            <p>どんなにつらくてもあきらめず最後まで取り組む強い心が身に付きました。</p>
-                            <ul>
-                                <li>年数：3年</li>
-                                <li>ポジション：レフトorライト</li>
-                            </ul>
-                        </div>
+            <div class="title">
+                <h2>部活動</h2>
+            </div>
+            <div class="profile">
+                <h2>中学生</h2>
+                <div class="bale">
+                    <img src="img/ground.jpg" alt="ground画像" class="item-img">
+                    <div class="li">
+                        <p>中学生時代に部活動で野球をしていました。</p>
+                        <p>朝練から、学校終わりのあとの部活動はもちろんのこと、土日にもほとんど練習や大会がありとても大変でした。</p>
+                        <p>どんなにつらくてもあきらめず最後まで取り組む強い心が身に付きました。</p>
+                        <ul>
+                            <li>年数：3年</li>
+                            <li>ポジション：レフトorライト</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="profile">
+                <h2>高校生</h2>
+                <div class="bale">
+                    <img src="img/bmt_menber.jpg" alt="ground画像" class="item-img">
+                    <div class="li">
+                        <p>高校生時代に部活動でバトミントンをしていました。</p>
+                        <p>たくさんの友達に支えれながら、一緒にダブルスの連携や個人の技術向上に向けて頑張っていました。</p>
+                        <p>ここでできた友達のおかげで、高校生活がより充実したものになりました。</p>
+                        <ul>
+                            <li>年数：1年半</li>
+                            <li></li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <a class="link-text" href="index.html">Back To Products</a>
+            <div id="page-top">
+                <a href="#">TOP</a>
+            </div>
         </main>
-        <footer id="footer" class="wrapper">
+        <!-- <footer id="footer" class="wrapper">
             <ul class="menu">
                 <li>INSTAGRAM</li>
                 <li>TWITTER</li>
                 <li>FACEBOOK</li>
             </ul>
-        </footer>
+        </footer> -->
     </body>
 </html>

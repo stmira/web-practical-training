@@ -58,6 +58,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// pageTopBtm
+$(function() {
+    const topBtn = $('#page-top');
+    topBtn.hide(); // 最初はボタンを隠す
+
+    // スクロールが100に達したらボタンを表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+            topBtn.addClass('is-show');
+        } else {
+            topBtn.fadeOut();
+            topBtn.removeClass('is-show');
+        }
+    });
+
+    // スムーズにスクロールしてトップに戻る
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500); // 0.5秒かけて戻る
+        return false;
+    });
+});
+
 // about
 document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('code-input');

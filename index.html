@@ -8,6 +8,9 @@
         <link rel="icon" href="img/favicon.ico">
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Murecho:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
     </head>
@@ -21,53 +24,62 @@
         <header id="header" class="wrapper">
             <h1 class="site-title">
                 <a href="index.html">
-                        <P>自己紹介</P>
-                    </a>
+                    <P>Home</P>
+                </a>
             </h1>
             <div id="navArea">
                 <button id="nav">
                     <!-- ナビゲーションの中身 -->
                     <ul class="menu-list">
-                        <li><a href="index.html">PRODUCTS</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="company.html">COMPANY</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
+                        <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">Game</a></li>
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
                         <img src="img/blueApple.png" alt="青りんごの画像">
-                </button>
-            </div>
-            <div class="btn-trigger">
-                <section>
-                    <div class="content">
-                        <span></span>
-                        <span></span>
+                    </button>
+                </div>
+                <div class="btn-trigger">
+                    <section>
+                        <div class="content">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </section>
+                </div>
+            </header>
+            <main>
+                <div id="top" class="wrapper">
+                    <div class="profile">
+                        <h2>自己紹介</h2>
+                        <ul>
+                            <li>名前： 齋藤未來</li>
+                            <li>趣味： ゲーム,アニメ・動画見ること</li>
+                            <li>好きなアーティスト：<a href="https://mrsgreenapple.com/" target="_blank" rel="noopener noreferrer"> Mrs.GreenApple</a></li>
+                            <li>性格タイプ：<a href="https://www.16personalities.com/ja/%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%97" target="_blank" rel="noopener noreferrer"> 冒険家（ISFP-T）</a></li>
+                        </ul>
                     </div>
-                </section>
-            </div>
-        </header>
-        <main>
-            <div id="top" class="wrapper">
                 <ul class="product-list">
                     <li>
                         <a href="item1.html">
                             <div class="baseball-box"></div>
-                            <div id="moji">
-                                <p>野球</p>
+                            <div id="text">
+                                <p>部活動</p>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="item2.html">
                             <div class="bmt-box"></div>
-                            <div id="moji">
-                                <p>バトミントン</p>
+                            <div id="text">
+                                <p>ねこ</p>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="item4.html">
                             <div class="music-box"></div>
-                            <div id="moji">
+                            <div id="text">
                                 <p>好きな音楽</p>
                             </div>
                         </a>
@@ -75,7 +87,7 @@
                     <li>
                         <a href="item3.html">
                             <div class="game-box"></div>
-                            <div id="moji">
+                            <div id="text">
                                 <p>好きなゲーム</p>
                             </div>
                         </a>
@@ -83,7 +95,7 @@
                     <li>
                         <a href="item5.html">
                             <div class="anime-box"></div>
-                            <div id="moji">
+                            <div id="text">
                                 <p>好きなアニメ</p>
                             </div>
                         </a>
@@ -91,7 +103,7 @@
                     <li>
                         <a href="item6.html">
                             <div class="make-box"></div>
-                            <div id="moji">
+                            <div id="text">
                                 <p>作品</p>
                             </div>
                         </a>
@@ -99,12 +111,12 @@
                 </ul>
             </div>
         </main>
-        <footer id="footer" class="wrapper">
+        <!-- <footer id="footer" class="wrapper">
             <ul class="menu">
-                <li>INSTAGRAM</li>
-                <li>TWITTER</li>
-                <li>FACEBOOK</li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
-        </footer>
+        </footer> -->
     </body>
 </html>
