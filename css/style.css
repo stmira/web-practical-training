@@ -857,6 +857,12 @@ main .bale .li ul {
 /* ★★★　companyページのスタイル　★★★ */
 #company {
     max-width: 600px;
+    margin: 50px auto !important;
+    color: #005133;
+    border: #005133 solid 2px;
+    border-radius: 30px;
+    padding: 10px 80px;
+    background-color: white;
 }
 #company .info { 
     width: 100%;
@@ -867,7 +873,7 @@ main .bale .li ul {
 #company .info td {
     font-size: 14px;
     font-weight: normal;
-    border-bottom: 1px solid #dcdbdb;
+    border-bottom: 1px solid #B2D235;
     padding: 20px 10px;
 }
 #company .info th {
@@ -886,7 +892,7 @@ main .bale .li ul {
 
 /* google Map */
 #company .map {
-    filter: grayscale(1);
+    filter: grayscale(0);
     margin-bottom: 100px;
 }
 #company .map iframe {
@@ -895,15 +901,20 @@ main .bale .li ul {
 }
 
 /* contactのデザイン */
-#content-form {
+#contact-form {
     max-width: 600px;
+    margin: 50px auto !important;
+    color: #005133;
 }
 #contact-form input,
 #contact-form textarea,
 #contact-form select,
 #contact-form button {
-    width: 50%;
-    border: 1px solid #dcdbdb;
+    width: 100%;
+    background-color: white;
+    border: 2px solid #005133;
+    border-radius: 10px;
+    color: #005133;
     padding: 10px;
 }
 
