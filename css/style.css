@@ -944,6 +944,7 @@ main .bale .li ul {
     width: 300px;
     border: 2px solid white;
     color: rgb(255, 196, 0);
+    background-color: white;
 }
 
 #myButton {
