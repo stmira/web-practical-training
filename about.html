@@ -7,66 +7,72 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- pcとスマホを切り替えるため必要なコード-->
         <link rel="icon" href="img/favicon.ico">
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
-            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <style id="dynamic-style"></style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
     </head>
     <body>
-        <header id="header2" class="wrapper">
+        <div class="drawing" id="loading">
+            <div class="loading-dot"></div>
+        </div>
+        <div class="headImg">
+            <img id="apple" src="img/redRingo.png" alt="リンゴの画像">
+        </div>
+        <header id="header" class="wrapper">
+            <h1 class="site-title">
+                <a href="index.html">
+                    <P>戻る</P>
+                </a>
+            </h1>
             <div id="navArea">
                 <button id="nav">
                     <!-- ナビゲーションの中身 -->
                     <ul class="menu-list">
-                        <li><a href="index.html">PRODUCTS</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="company.html">COMPANY</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </button>
-            </div>
-            <div class="content">
-                <section>
-                    <div class="btn-trigger">
-                        <span></span>
-                        <span></span>
+                        <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">Game</a></li>
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <img src="img/blueApple.png" alt="青りんごの画像">
+                    </button>
+                </div>
+                <div class="btn-trigger">
+                    <section>
+                        <div class="content">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </section>
+                </div>
+            </header>
+            <div class="content wrapper" style="padding-top: 100px;">
+                <h1 class="page-title"></h1>
+                <div id="about">
+                </div>
+                <div id="bg-text">
+                    <div class="apple">
+                        <div class="leaf"></div>
+                        <div class="stem"></div>
                     </div>
-                </section>
-            </div>
-        <style id="dynamic-style">
-            body {
-                margin: 0;
-                background-color: #1a1a1a;
-                color: white;
-                transition: all 0.5s;  /* 変化をなめらかに */
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                overflow: hidden;
-                font-family: sans-serif;
-            }
-        </style>
-        </header>
-        <div class="content wrapper" style="padding-top: 100px;">
-            <h1 class="page-title"></h1>
-            <div id="about">
-            </div>
-            <div id="bg-text">
-                <div class="apple">
-                    <div class="leaf"></div>
-                    <div class="stem"></div>
                 </div>
             </div>
-        </div>
-    </body>
-    <div class="input-container">
-        <div class="input-textarea">
-            <input type="text" id="code-input" placeholder="コードを入力" spellcheck="false">
-            <button id="myButton">送信</button>
+            <div id="magic-book-container">
+                <div id="book-icon">
+                    <img src="img/book.png" alt="魔法の本">
+                </div>
+                <div id="book-content" class="hidden">
+                    <h3>魔法一覧</h3>
+                    <ul id="preset-list"></ul>
+                    <button id="close-book">閉じる</button>
+                </div>
+            </div>
+        </body>
+        <div class="input-container">
+            <div class="input-textarea">
+                <input type="text" id="code-input" placeholder="コードを入力" spellcheck="false">
+                <button id="myButton">魔法</button>
         </div>
         <div style="margin-top: 10px;">
             <button id="reset-btn">
