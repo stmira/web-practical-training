@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 /* header */
 #header {
     display: flex;
@@ -29,19 +36,17 @@
 .headImg img {
     width: 110px;
     height: 115px;
-    position: fixed;   /* 画面に固定 */
-    top: 10px;         /* 上から10px */
-    right: 20px;       /* ★ここを right に変更！左からの指定(left)は消します */
+    position: fixed;
+    top: 10px;
+    right: 20px;
     z-index: 51;
     pointer-events: none;
-    
-    /* 余計な margin は削除するか 0 にします */
     margin: 0 !important; 
 }
 
 /* View More */
 .link-text {
-    display: block; /* タグの内容をブロックとして扱う */
+    display: block;
     text-align: center;
     margin-top: 40px;
 }
@@ -256,13 +261,13 @@ a {
 /* ★★★　ハンバーガーメニューのスタイル　★★★ */
 .btn-trigger {
     cursor: pointer;
-    position: fixed;    /* 画面に固定 */
-    top: 35px;          /* 上からの位置（お好みで調整） */
-    right: 35px;        /* 右からの位置 */
+    position: fixed;
+    top: 35px;
+    right: 35px;
     width: 80px;
     height: 80px;
-    z-index: 100;       /* リンゴ(51)やヘッダー(40)より上に表示 */
-    opacity: 0;         /* ★ 0から1に変更して表示させる */
+    z-index: 100;
+    opacity: 0;
     border: 2px solid black;
     border-radius: 50%;
     display: flex;
@@ -343,25 +348,6 @@ a {
 @keyframes rotateAction {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-/*=============================
-.btn-trigger.active
-=============================*/
-.btn-trigger.active {
-    background-color: #f0f0f0;
-    border-color: black;
-}
-.btn-trigger.active span {
-    background-color: #000000;
-}
-.btn-trigger.active span:nth-of-type(1) {
-    -webkit-transform: translateX(-50%) translateY(7.5px) rotate(-45deg);
-    transform: translateX(-50%) translateY(7.5px) rotate(-45deg);
-}
-.btn-trigger.active span:nth-of-type(2) {
-    -webkit-transform: translateX(-50%) translateY(-7.5px) rotate(45deg);
-    transform: translateX(-50%) translateY(-7.5px) rotate(45deg);
 }
 
 /* ローディング画面 */
@@ -822,7 +808,7 @@ main .bale .li ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     list-style: none;
-    padding: 0 0 !important;
+    padding: 0 0% !important;
     text-decoration: none;
     place-content: center;
     place-items: center;
@@ -833,8 +819,39 @@ main .bale .li ul {
     height: 90% !important;
     margin: 20px 0 !important;
 }
+
+.youtube .profile li {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.youtube .profile ul {
+    padding: 10px 0px;
+}
 #lulu  img{
     width: 40% !important;
+}
+
+/* game */
+.game {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+.game ul {
+    width: 120%;
+    padding-left: 0;
+}
+.like_game .profile img {
+    width: 300px;
+}
+/* item3 */
+#item3-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#item3 img {
+    width: 300px;
 }
 
 /* ★★★　companyページのスタイル　★★★ */
@@ -901,7 +918,7 @@ main .bale .li ul {
 /* ★★★　about　★★★ */
 .input-textarea {
     position: fixed;
-    top: 80%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -932,7 +949,7 @@ main .bale .li ul {
 
 #bg-text {
     position: fixed;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -957,16 +974,17 @@ main .bale .li ul {
 }
 
 #reset-btn:active {
-    transform: scale(0.9); /* 押した時に少し凹む演出 */
+    transform: scale(0.9);
 }
 
 .apple {
     width: 100px;
     height: 90px;
-    background-color: #ff3b30; /* リンゴの赤 */
+    background-color: #ff3b30; 
     position: relative;
-    border-radius: 40px 40px 50px 50px; /* 下を少し絞る */
-    margin: 50px auto;
+    border-radius: 40px 40px 50px 50px;
+    margin: 100px auto;
+    transition: all 0.5s ease;
 }
 
 /* ヘタの部分 */
@@ -990,6 +1008,94 @@ main .bale .li ul {
     left: 55px;
     border-radius: 0 20px 0 20px; /* 葉っぱの形にする */
     transform: rotate(-10deg);
+}
+
+/* 本全体のコンテナ：画面の左下付近に固定 */
+#magic-book-container {
+    padding: 18% 0 0 15%;
+    z-index: 100;
+    margin: 0 !important;
+}
+
+/* 閉じている時のアイコン（画像） */
+#book-icon img {
+    width: 200px; 
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* 開いた時の中身（リスト） */
+#book-content {
+    width: 250px;
+    background: #fdf5e6;
+    border: 5px solid #5d4037;
+    padding: 20px;
+    border-radius: 10px;
+    display: none; 
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+}
+
+#book-content.show { display: block; }
+
+#book-content h3 {
+    margin-bottom: 15px;
+    color: #5d4037;
+    border-bottom: 2px solid #5d4037;
+}
+
+#preset-list {
+    list-style: none;
+    padding: 0;
+}
+
+#preset-list li {
+    background: rgba(0,0,0,0.05);
+    margin: 8px 0;
+    padding: 8px;
+    cursor: pointer;
+    border-left: 4px solid #866bff;
+    font-family: monospace;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#preset-list li:hover {
+    background: #866bff;
+    color: white;
+}
+
+#close-book {
+    margin-top: 15px;
+    font-size: 13px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid #5d4037;
+    border-radius: 30px;
+    padding: 3px 8px;
+}
+
+/* --- 魔法用のアニメーション定義 --- */
+
+/* 回転 */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 浮遊 */
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+/* リンゴに変化を滑らかにする設定を追加 */
+.apple {
+    transition: all 0.5s ease;
 }
 
 /* ★★★　レスポンシブ対応デザイン　★★★ */

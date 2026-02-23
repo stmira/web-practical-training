@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>Furniture Design</title>
+        <meta name="description" content="家具の紹介ページ">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- pcとスマホを切り替えるため必要なコード-->
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="drawing" id="loading">
+            <div class="loading-dot"></div>
+        </div>
+        <div class="headImg">
+            <img id="apple" src="img/redRingo.png" alt="リンゴの画像">
+        </div>
+        <header id="header" class="wrapper">
+            <h1 class="site-title">
+                <a href="index.html">
+                    <P>戻る</P>
+                </a>
+            </h1>
+            <div id="navArea">
+                <button id="nav">
+                    <!-- ナビゲーションの中身 -->
+                    <ul class="menu-list">
+                        <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">Game</a></li>
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <img src="img/blueApple.png" alt="青りんごの画像">
+                    </button>
+                </div>
+                <div class="btn-trigger">
+                    <section>
+                        <div class="content">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </section>
+                </div>
+        </header>
+        <main>
+            <div class="title">
+                <h2>好きなゲーム</h2>
+            </div>
+            <div class="music">
+                <div class="profile">
+                    <h2>HoYoverse</h2>
+                    <div class="bale">
+                        <img src="img/hoyoverse.webp" alt="cat画像" class="item-img">
+                        <div class="li">
+                            <p>世界的にヒットした『原神』や『崩壊』シリーズで知られる、中国・上海発のゲーム開発・パブリッシングブランドです。</p>
+                            <p>2022年2月に設立され、それまで「miHoYo（ミホヨ）」が展開していたグローバル事業のブランド名称として、没入感のある仮想世界体験を提供することを目的に作られた。</p>
+                            <div class="game">
+                                <ul>
+                                    <li>主な代表ゲーム
+                                        <ul>
+                                            <li>　　・　『原神』: オープンワールドRPG</li>
+                                            <li>　　・　『崩壊：スターレイル』: 銀河ファンタジーRPG（ターン制）</li>
+                                            <li>　　・　『ゼンレスゾーンゼロ』: 都市ファンタジーアクション</li>
+                                            <li>　　・　『崩壊3rd』: 本格3Dアクションゲーム</li>
+                                            <li>　　・　『未定事件簿』: 乙女・恋愛アドベンチャーゲーム</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-title">
+                    <h3>詳細</h3>
+                </div>
+                <ul class="like_game">
+                    <div class="profile">
+                        <h2>原神</h2>
+                        <div class="bale">
+                            <img src="img/gensin.jpg" alt="原神の画像" class="item-img">
+                            <div class="li">
+                                <p>圧倒的なクオリティのグラフィックと自由度の高い冒険が魅力のオープンワールドRPGです。</p>
+                                <p>2020年のリリース以来、世界中で爆発的な人気を誇る基本無料ゲーム（アイテム課金制）です。</p>
+                                <ul>
+                                    <li>ジャンル： オープンワールド・アクションRPG</li>
+                                    <li>プラットフォーム： PC, PS5, iOS, Android, Xbox</li>
+                                    <li>特徴： 広大な「テイワット」大陸を自由に探索し、元素（属性）を駆使した戦闘やパズルを楽しめる</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>崩壊スターレイル</h2>
+                        <div class="bale">
+                            <img src="img/str.jpg" alt="崩壊スターレイルの画像" class="item-img">
+                            <div class="li">
+                                <p>スペースファンタジーRPGです。</p>
+                                <p>プレイヤーは銀河を旅する「開拓者」となり、星穹列車で未知の惑星を巡り、戦略的なターン制コマンドバトルや美麗なアニメ調グラフィックで紡がれるストーリーを楽しめます。</p>
+                                <ul>
+                                    <li>プラットフォーム: PC、iOS、Android、PS5</li>
+                                    <li>特徴:<br>
+                                        ・キャラの属性や「運命（役割）」を意識した編成が重要です。<br>
+                                        ・通常攻撃でスキルポイント（SP）を貯め、強力な戦闘スキルで消費する、パーティ全体で共有するSPの管理がバトルの鍵となります。<br>
+                                        ・オートモードや倍速機能があり、手軽に育成や周回が可能です。
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>ゼンレスゾーンゼロ</h2>
+                        <div class="bale">
+                            <img src="img/zzz.webp" alt="zzzの画像" class="item-img">
+                            <div class="li">
+                                <p>都市ファンタジーアクションRPGです。</p>
+                                <p>「プロキシ」と呼ばれる怪異・災害の調査員として、人々を「ホロウ」から救出したり、都市の謎を解き明かす。</p>
+                                <ul>
+                                    <li>プラットフォーム： PS5、PC、iOS、Android</li>
+                                    <li>特徴:<br>
+                                        ・3人1組のチームで、キャラクターの切り替え、回避、パリィ（受け流し）、連携スキルを駆使した爽快感のあるアクション<br>
+                                        ・獣人からアンドロイド、スタイリッシュなキャラまで、個性的なエージェントたちが多数登場<br>
+                                        ・終末世界でありながら、ポップで近未来的なネオン街の雰囲気（都市ファンタジー）
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>崩壊3rd</h2>
+                        <div class="bale">
+                            <img src="img/houkai.jpg" alt="3rdの画像" class="item-img">
+                            <div class="li">
+                                <p>美麗な3Dグラフィックと爽快な高速アクションが特徴のSFアクションRPGです。</p>
+                                <p>『原神』や『崩壊：スターレイル』を手掛けるmiHoYo（HoYoverse）の3Dアクションゲームの基礎となった作品。世界観や設定が共通している部分もあります。</p>
+                                <ul>
+                                    <li>プラットフォーム： PC、iOS、Android</li>
+                                    <li>特徴:<br>
+                                        ・キャラクターの切り替え、QTE（クイックタイムイベント）、極限回避を駆使する爽快な3Dアクション<br>
+                                        ・第一部（完結）から続く物語は非常に高く評価されており、第2部からは新しい舞台や物語が展開中。<br>
+                                        ・崩壊という災いに対抗する少女たちの物語を描き、第2部からはオープンワールド要素が強化
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <!-- <div class="music-title">
+                    <h3>プレイ内容</h3>
+                </div>
+                <ul class="youtube">
+                    <div class="profile">
+                        <h2>lulu</h2>
+                        <div class="bale" id="lulu">
+                            <img src="img/lulu_samne.jpeg" alt="luluの画像" class="item-img">
+                            <div class="li">
+                                <p>バンドのフェーズ3始動を告げる第1弾楽曲であり、アニメ『葬送のフリーレン』第2期オープニングテーマです。</p>
+                                <p>輪廻転生をテーマに、高密度のサウンドと冷徹かつ温かい視点で、命のつながりや時の残酷さを描いた壮大な物語となっています</p>
+                                <ul>
+                                    <li>リリース日： 2026/1/12</li>
+                                    <li><a href="https://youtu.be/MjeiIal1ZR0?si=Rrxzy89WW7C5ZVJl" target="_blank" rel="noopener noreferrer">【聞いてみる】</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>天国</h2>
+                        <div class="bale">
+                            <img src="img/tengoku.webp" alt="天国の画像" class="item-img">
+                            <div class="li">
+                                <p>Mrs. GREEN APPLEの「天国」は、2025年4月公開の映画『#真相をお話しします』の主題歌として書き下ろされた楽曲です。</p>
+                                <p>大森元貴の壮大な愛や人間の絆をテーマにした歌詞と、7回以上の転調を重ねる複雑な構成が特徴的です。</p>
+                                <ul>
+                                    <li>リリース日： 2025/5/2</li>
+                                    <li><a href="https://youtu.be/CO0Eoj9aPcs?si=tyR1Ro17hNOtzD1k" target="_blank" rel="noopener noreferrer">【聞いてみる】</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>ナハトムジーク</h2>
+                        <div class="bale">
+                            <img src="img/nahatomu.jpg" alt="ナハトムジークの画像" class="item-img">
+                            <div class="li">
+                                <p>2024年1月にリリースされた映画『サイレントラブ』の主題歌です。</p>
+                                <p>不器用ながら誰かを強く想う愛と、人生の不完全さを肯定する温かく美しいメッセージが込められたバラード曲で、ストリーミング累計1億回再生を突破するなど多くの共感を集めています。</p>
+                                <ul>
+                                    <li>リリース日： 2024/01/17</li>
+                                    <li><a href="https://youtu.be/Dsylo684yWA?si=NqjDJ2KEuqgAOLWS" target="_blank" rel="noopener noreferrer">【聞いてみる】</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>ANTENNA</h2>
+                        <div class="bale">
+                            <img src="img/antena.jpg" alt="アンテナの画像" class="item-img">
+                            <div class="li">
+                                <p>自身の「感受性（アンテナ）」を大切に生きるという強いメッセージが込められた楽曲です。</p>
+                                <p>バレーボールの応援ソングでもあり、人生の複雑な感情を受け入れながら前を向く、背中を押す歌詞とエネルギーあふれるサウンドが特徴です。</p>
+                                <ul>
+                                    <li>リリース日： 2023/07/05</li>
+                                    <li><a href="https://youtu.be/XiSa_VIrGKE?si=aEmnC1KgwGv48EAF" target="_blank" rel="noopener noreferrer">【聞いてみる】</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ul> -->
+            </div>
+            <a class="link-text" href="index.html">Back To Products</a>
+            <div id="page-top">
+                <a href="#">TOP</a>
+            </div>
+        </main>
+        <!-- <footer id="footer" class="wrapper">
+            <ul class="menu">
+                <li>INSTAGRAM</li>
+                <li>TWITTER</li>
+                <li>FACEBOOK</li>
+            </ul>
+        </footer> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

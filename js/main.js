@@ -83,129 +83,87 @@ $(function() {
     });
 });
 
-// about
+// about ページの処理
 document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('code-input');
     const styleTag = document.getElementById('dynamic-style');
-    const bgText = document.getElementById('bg-text');
     const myButton = document.getElementById('myButton');
     const resetBtn = document.getElementById('reset-btn');
 
-    // コード適用
-    if (!input || !styleTag || !bgText) return; //必要な要素が見つからなかったら以降の処理を中断
+    if (!input || !styleTag || !myButton) return;
 
-    // 初期のCSSを保持しておき、適用時はこれを残した上でユーザー入力を追加する
-    const initialCSS = styleTag.innerHTML;
+    myButton.addEventListener('click', () => {
+        const code = input.value;
+        if (!code) return; // 空なら何もしない
 
-    if (myButton) {
-        myButton.addEventListener('click', () => {
-            const code = input.value;
-            myButton.style.background = "#866bff";
-            setTimeout(()=>{ myButton.style.background = "#444";}, 200);
+        // ボタンの演出
+        myButton.style.background = "#866bff";
+        setTimeout(() => { myButton.style.background = "#444"; }, 200);
 
-            // 元のCSSを残して、ユーザーの入力を追記する
-            styleTag.innerHTML = initialCSS + "\n" + code;
+        // ユーザーが書いたコードを .apple { ... } で包む
+        const appleFocusedCode = `.apple { ${code} }`;
 
-            if(code.includes('name')){
-                // bgText.innerText = "MY NAME IS GEMINI";
-            } else if (code.includes('hobby')){
-                // bgText.innerText = "I LOVE CODING";
-            } else {
-                // bgText.innerText = "コードをいれてね！";
-            };
+        // スタイルタグの中身を「魔法のコード」に置き換える
+        styleTag.innerHTML = appleFocusedCode;
 
-            if (input.value.length > 0){
-                resetBtn.style.display = "block";
-            } else {
-                resetBtn.style.display = "none";
-            }
-        });
-    }
-
-    // リセットボタン
-    if (resetBtn) {
-        resetBtn.addEventListener('click', ()=>{
-        input.value = "";
-        styleTag.innerHTML = initialCSS;
-        // bgText.innerText = "HELLO WORLD"
-        resetBtn.style.background = "#866bff";
-        setTimeout(()=>{ resetBtn.style.background = "#444";}, 200);
+        // リセットボタンを表示
+        resetBtn.style.display = "block";
     });
+
+    // リセットボタンの処理
+    if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+            input.value = "";
+            styleTag.innerHTML = ""; // 魔法を解除
+            resetBtn.style.display = "none";
+        });
     }
 });
 
 // コードのプリセット
 const presets = [
-    {name:"上下反転", code:"body { transform: rotate(180deg); }"},
-    {name:"ぼかし", code:"body { filter: blur(5px); }"},
-    {name:"大きくする", code:"* { font-size: 30px; }"},
-    
+    {name: "青リンゴにする", code: "background-color: #4cd964;"},
+    {name: "巨大化", code: "transform: scale(2);"},
+    {name: "回転させる", code: "animation: spin 2s linear infinite;"},
+    {name: "消える魔法", code: "opacity: 0;"},
+    {name: "浮遊する", code: "animation: floating 3s ease-in-out infinite;"}
 ];
 
-// コードを流す（DOM 準備後に初期化）
 document.addEventListener('DOMContentLoaded', () => {
-    // このスクリプトは about ページのみに限定する
-    // about.html にある要素 '#about' が存在しなければ処理を中断
-    if (!document.getElementById('about')) return;
-
-    // コメント用コンテナがあればそれを使い、なければ about ページでは body を使う
-    const container = document.getElementById('comment-container') || document.body;
-
+    const bookIcon = document.getElementById('book-icon');
+    const bookContent = document.getElementById('book-content');
+    const closeBook = document.getElementById('close-book');
+    const presetList = document.getElementById('preset-list');
     const input = document.getElementById('code-input');
-    const styleTag = document.getElementById('dynamic-style');
 
-    function spawnPreset() {
-        const data = presets[Math.floor(Math.random() * presets.length)];
-        const item = document.createElement('div');
+    if (!bookIcon || !presetList) return;
 
-        // data が文字列かオブジェクトかを判定して表示ラベルとコード本体を決定
-        const codeText = (typeof data === 'string') ? data : (data.code || '');
-        const labelText = (typeof data === 'string') ? data : (data.name || data.code || 'preset');
+    // 1. 本を開閉する
+    bookIcon.addEventListener('click', () => {
+        bookContent.classList.add('show');
+        bookIcon.style.display = 'none';
+    });
 
-        item.innerText = labelText;
-        item.dataset.code = codeText;
+    closeBook.addEventListener('click', () => {
+        bookContent.classList.remove('show');
+        bookIcon.style.display = 'block';
+    });
 
-        // スタイル: フッター上に重なってもクリックできるように固定配置かつ高い z-index を指定
-        Object.assign(item.style, {
-            position: 'fixed',
-            left: '100%',
-            top: Math.random() * 80 + '%',
-            whiteSpace: 'nowrap',
-            cursor: 'pointer',
-            padding: '10px',
-            background: 'rgba(0, 255, 0, 0.1)',
-            border: '1px solid #0f0',
-            color: '#0f0',
-            fontFamily: 'monospace',
-            zIndex: '0',
-            pointerEvents: 'auto'
-        });
-
-        // DOM に追加して画面上に表示
-        container.appendChild(item);
-
-        item.onclick = () => {
-            // クリックで入力欄にコードをコピー
+    // 2. プリセットを本の中に生成する
+    presets.forEach(data => {
+        const li = document.createElement('li');
+        li.innerText = data.name;
+        
+        li.onclick = () => {
             if (input) {
-                input.value = item.dataset.code || '';
+                input.value = data.code;
                 input.focus();
+                input.style.boxShadow = "0 0 15px #866bff";
+                setTimeout(() => { input.style.boxShadow = "none"; }, 500);
             }
-            item.style.background = "yellow"; 
-            setTimeout(() => item.remove(), 200);
         };
-
-        const anim = item.animate([
-            { left: '100%' },
-            { left: '-100%' }
-        ], {
-            duration: 30000 + Math.random() * 5000, // 10〜15秒かけてゆっくり
-            easing: 'linear'
-        });
-
-        anim.onfinish = () => item.remove();
-    }
-
-    setInterval(spawnPreset, 3000);
+        presetList.appendChild(li);
+    });
 });
 
 // index

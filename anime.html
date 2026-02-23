@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>Furniture Design</title>
+        <meta name="description" content="家具の紹介ページ">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- pcとスマホを切り替えるため必要なコード-->
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="drawing" id="loading">
+            <div class="loading-dot"></div>
+        </div>
+        <div class="headImg">
+            <img id="apple" src="img/redRingo.png" alt="リンゴの画像">
+        </div>
+        <header id="header" class="wrapper">
+            <h1 class="site-title">
+                <a href="index.html">
+                    <P>戻る</P>
+                </a>
+            </h1>
+            <div id="navArea">
+                <button id="nav">
+                    <!-- ナビゲーションの中身 -->
+                    <ul class="menu-list">
+                        <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">Game</a></li>
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <img src="img/blueApple.png" alt="青りんごの画像">
+                    </button>
+                </div>
+                <div class="btn-trigger">
+                    <section>
+                        <div class="content">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </section>
+                </div>
+        </header>
+        <main>
+            <div class="title">
+                <h2>好きなアニメ</h2>
+            </div>
+                <ul>
+                    <div class="profile">
+                        <h2>Re:ゼロから始める異世界生活</h2>
+                        <div class="bale" id="lulu">
+                            <img src="img/0.jpg" alt="リゼロの画像" class="item-img">
+                            <div class="li">
+                                <p>コンビニからの帰り道、突如として異世界へと召喚されてしまった少年・ナツキ スバル。<br>
+                                    頼れるものなど何一つない異世界で、無力な少年が手にした唯一の力……それは死して時間を巻き戻す《死に戻り》の力だった。<br>
+                                    大切な人たちを守るため、そして確かにあったかけがえのない時間を取り戻すため、少年は絶望に抗い、過酷な運命に立ち向かっていく。</p>
+                                <ul>
+                                    <li>主な登場キャラ:<br>
+                                        　・ ナツキ・スバル cv:小林裕介<br>
+                                        　・ エミリア cv:高橋李依<br>
+                                        　・ レム cv:水瀬いのり ←推し<br>
+                                        　・ ラム cv:村川梨衣<br>
+                                        　・ ベアトリス cv:新井里美
+                                    </li>
+                                    <li>4thseason: 2026年4月から放送開始</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>葬送のフリーレン</h2>
+                        <div class="bale">
+                            <img src="img/sousou.jpg" alt="フリーレンの画像" class="item-img">
+                            <div class="li">
+                                <p>魔王を倒し王都へ凱旋した勇者ヒンメル一行。各々が冒険した10年を振り返りながらこれからの人生に想いを馳せる中、エルフのフリーレンは感慨にふけることもなく、また魔法探求へと旅立っていく。50年後、皆との約束のためフリーレンは再び王都へ。その再会をきっかけに、彼女は新たな旅へと向かうことに―。</p>
+                                <ul>
+                                    <li>主な登場キャラ:<br>
+                                        　・ フリーレン cv:種﨑敦美<br>
+                                        　・ フェルン cv:市ノ瀬加那<br>
+                                        　・ シュタルク cv:小林千晃<br>
+                                        　・ ヒンメル cv:岡本信彦
+                                    </li>
+                                    <li>2期： 放送中！！</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>呪術廻戦</h2>
+                        <div class="bale">
+                            <img src="img/jujutu.jpg" alt="呪術の画像" class="item-img">
+                            <div class="li">
+                                <p>主人公・虎杖悠仁を中心に呪いと戦う呪術師たちの姿が描かれる物語です。<br>
+                                    その舞台は現代の日本。 呪術師たちが戦う（祓う）のは人間の負の感情が流れ出ることで生まれる化け物・呪霊（じゅれい）。</p>
+                                <ul>
+                                    <li>主な登場キャラ:<br>
+                                        　・ 虎杖悠仁 cv:榎木淳弥<br>
+                                        　・ 伏黒恵 cv:内田雄馬<br>
+                                        　・ 釘崎野薔薇 cv:瀬戸麻沙美<br>
+                                        　・ 五条悟 cv:中村悠一<br>
+                                        　・ 夏油傑 cv:櫻井孝宏<br>
+                                        　・ 乙骨憂太 cv:緒方恵美<br>
+                                    </li>
+                                    <li>2025年9月より呪術廻戦≡（モジュロ）本編の70年後？！が連載中</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h2>鬼滅の刃</h2>
+                        <div class="bale">
+                            <img src="img/kimetu.jpg" alt="鬼滅の画像" class="item-img">
+                            <div class="li">
+                                <p>大正時代を舞台に、鬼に家族を殺され妹を鬼にされた少年・竈門炭治郎が、妹を人間に戻し家族の仇を討つため、鬼殺隊として鬼と戦う血風剣戟冒険譚。<br>
+                                    心優しい炭治郎が、善逸・伊之助ら仲間や「柱」と共に、悲しい過去を持つ鬼たちと戦う友情と努力の物語。</p>
+                                <ul>
+                                    <li>主な登場キャラ:<br>
+                                        　・ 竈門炭治郎 cv:花江夏樹<br>
+                                        　・ 竈門禰豆子 cv:鬼頭明里<br>
+                                        　・ 我妻善逸 cv:下野 紘<br>
+                                        　・ 嘴平伊之助 cv:松岡禎丞<br>
+                                        　・ 冨岡義勇 cv:櫻井孝宏<br>
+                                        　・ 鱗滝左近次 cv:大塚芳忠<br>
+                                    </li>
+                                    <li>劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来 公開中！！</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <a class="link-text" href="index.html">Back To Products</a>
+            <div id="page-top">
+                <a href="#">TOP</a>
+            </div>
+        </main>
+        <!-- <footer id="footer" class="wrapper">
+            <ul class="menu">
+                <li>INSTAGRAM</li>
+                <li>TWITTER</li>
+                <li>FACEBOOK</li>
+            </ul>
+        </footer> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
